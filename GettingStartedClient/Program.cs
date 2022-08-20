@@ -10,7 +10,8 @@ namespace GettingStartedClient
     {
         static void Main(string[] args)
         {
-            //Step 1: Create an instance of the WCF proxy.
+            // Test
+            // Step 1: Create an instance of the WCF proxy.
             CalculatorClient client = new CalculatorClient();
 
             // Step 2: Call the service operations.
