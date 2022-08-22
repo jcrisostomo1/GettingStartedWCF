@@ -38,6 +38,12 @@ namespace GettingStartedClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse")]
         System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Greet", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/GreetResponse")]
+        string Greet(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Greet", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/GreetResponse")]
+        System.Threading.Tasks.Task<string> GreetAsync(string name);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace GettingStartedClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2) {
             return base.Channel.DivideAsync(n1, n2);
+        }
+        
+        public string Greet(string name) {
+            return base.Channel.Greet(name);
+        }
+        
+        public System.Threading.Tasks.Task<string> GreetAsync(string name) {
+            return base.Channel.GreetAsync(name);
         }
     }
 }

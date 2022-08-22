@@ -39,6 +39,11 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
+            // Call the Greet service operation.
+            string name = "Josh";
+            string greeting = client.Greet(name);
+            Console.WriteLine(greeting);
+
             // Step 3: Close the client to gracefully close the connection and clean up resources.
             Console.WriteLine("\nPress <Enter> to terminate the client.");
             Console.ReadLine();

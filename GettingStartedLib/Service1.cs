@@ -37,5 +37,11 @@ namespace GettingStartedLib
             Console.WriteLine("Return: {0}", result);
             return result;
         }
+
+        public string Greet(string name)
+        {
+            string greetings = $"Hello, {name}";
+            return greetings;
+        }
     }
 }
